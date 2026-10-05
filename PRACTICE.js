@@ -61,13 +61,13 @@ do {
         }
         let grocery = prompt(`Search grocery: `).toUpperCase();
         if (grocery === "") continue;
-        else if (groceries.indexOf(grocery) >= 0) console.log(`Item is in list.`);
-        else console.log(`Item is not in list.`);
+        else if (groceries.indexOf(grocery) === -1) console.log(`Item is not in list.`);
+        else console.log(`Item is in list.`);
     } else if (opt === 3) {
         let grocery = prompt(`Add grocery: `).toUpperCase();
         if (grocery === "") continue;
-        else if (groceries.indexOf(grocery) >= 0) console.log(`Item is already in list.`);
-        else groceries.push(grocery);
+        else if (groceries.indexOf(grocery) === -1) groceries.push(grocery);
+        else console.log(`Item is already in list.`);
     } else {
         if (groceries.length === 0) {
             console.log(`List is empty.`);
