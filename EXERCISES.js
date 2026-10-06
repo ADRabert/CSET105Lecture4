@@ -27,8 +27,8 @@ console.log(`Exercise 3: Convert string to uppercase with own function`);
 const cvtUpper = (str) => {
 	let tmp = "";
 	for (let char of str) {
-		let asciiNum = char.charCodeAt();
-		if (asciiNum >= 97 && asciiNum <= 122) tmp += String.fromCharCode(asciiNum - 32);
+		let asciiNum = char.charCodeAt(); // Looked up how to convert chars to ASCII values
+		if (asciiNum >= 97 && asciiNum <= 122) tmp += String.fromCharCode(asciiNum - 32); // Looked up how to reverse the operation
 		else tmp += String.fromCharCode(asciiNum);
 	}
 	return tmp;
