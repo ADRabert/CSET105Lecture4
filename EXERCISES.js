@@ -14,12 +14,11 @@ const reverse = (num) => {
 		var tmp = "-";
 		str = str.slice(1);
 	} else var tmp = "";
-	for (let i = str.length - 1; i >= 0; i--) {
-		tmp += str[i];
-	}
-	return tmp;
+	for (let i = str.length - 1; i >= 0; i--) tmp += str[i];
+	while (tmp[0] === "0") tmp.slice(1);
+	return Number(tmp);
 }
-console.log(reverse(-123));
+console.log(reverse(-420));
 
 console.log(`Exercise 3: Convert string to uppercase with own function`);
 const cvtUpper = (str) => {
