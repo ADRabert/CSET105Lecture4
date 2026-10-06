@@ -26,8 +26,8 @@ console.log(reverse(-123));
 console.log(`Exercise 3: Convert string to uppercase with own function`);
 const cvtUpper = (str) => {
 	let tmp = "";
-	for (let i = 0; i < str.length; i++) {
-		let asciiNum = str.charCodeAt(i);
+	for (let char of str) {
+		let asciiNum = char.charCodeAt();
 		if (asciiNum >= 97 && asciiNum <= 122) tmp += String.fromCharCode(asciiNum - 32);
 		else tmp += String.fromCharCode(asciiNum);
 	}
@@ -38,8 +38,8 @@ console.log(cvtUpper("Hello World!"));
 console.log(`Exercise 4: Invert case of string`);
 const ivtCase = (str) => {
 	let tmp = "";
-	for (let i = 0; i < str.length; i++) {
-		let asciiNum = str.charCodeAt(i);
+	for (let char of str) {
+		let asciiNum = char.charCodeAt();
 		if (asciiNum >= 65 && asciiNum <= 90) tmp += String.fromCharCode(asciiNum + 32);
 		else if (asciiNum >= 97 && asciiNum <= 122) tmp += String.fromCharCode(asciiNum - 32);
 		else tmp += String.fromCharCode(asciiNum);
