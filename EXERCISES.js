@@ -1,5 +1,3 @@
-const prompt = require('prompt-sync')();
-
 console.log(`Exercise 1: Create own function that finds max of numbers`);
 const max = (...nums) => {
 	let result = -Infinity;
