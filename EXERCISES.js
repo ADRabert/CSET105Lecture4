@@ -15,7 +15,6 @@ const reverse = (num) => {
 		str = str.slice(1);
 	} else var tmp = "";
 	for (let i = str.length - 1; i >= 0; i--) tmp += str[i];
-	while (tmp[0] === "0") tmp.slice(1);
 	return Number(tmp);
 }
 console.log(reverse(-420));
